@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GM Studio Lab — Automazioni AI, Siti Web e Gestionali su misura per PMI</title>
+  <meta name="description"
+    content="GM Studio Lab di Gino Manno. Costruisco automazioni, siti e gestionali su misura per PMI italiane. Il lavoro di un giorno, fatto in pochi minuti. Roma.">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="GM Studio Lab — Automazioni AI, Siti Web e Gestionali su misura">
+  <meta property="og:description"
+    content="Costruisco automazioni, siti e gestionali su misura che lavorano per te — veloci, precisi e sempre operativi. Roma.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gmstudiolab.it">
+  <meta property="og:locale" content="it_IT">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="GM Studio Lab — Automazioni AI e Siti Web per PMI">
+  <meta name="twitter:description"
+    content="Costruisco automazioni, siti e gestionali su misura per PMI italiane. Roma.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="#" aria-label="GM Studio Lab - Home">
+        <img src="assets/logo-GMsito.svg" alt="GM Studio Lab" class="navbar-logo">
+      </a>
+      <div class="navbar-links">
+        <a href="#hero">Home</a>
+        <a href="#servizi">Servizi</a>
+        <!-- Dropdown Soluzioni -->
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Soluzioni
+            <i class="ti ti-chevron-down nav-dropdown-icon" aria-hidden="true"></i>
+          </button>
+          <div class="nav-dropdown-panel" role="menu">
+            <a href="automazioni.html" role="menuitem">
+              <i class="ti ti-settings-automation" aria-hidden="true"></i>
+              <span>
+                <strong>Automazioni</strong>
+                <small>Processi automatici che lavorano per te</small>
+              </span>
+            </a>
+            <a href="gestionali.html" role="menuitem">
+              <i class="ti ti-layout-dashboard" aria-hidden="true"></i>
+              <span>
+                <strong>Gestionali</strong>
+                <small>Software su misura per la tua attività</small>
+              </span>
+            </a>
+            <a href="sitiweb.html" role="menuitem">
+              <i class="ti ti-world-www" aria-hidden="true"></i>
+              <span>
+                <strong>Siti Web</strong>
+                <small>Presenza digitale che lavora per te</small>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="#processo">Come lavoro</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#chi-sono">Chi sono</a>
+        <a href="#contatti">Contatti</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="#hero">Home</a>
+    <a href="#servizi">Servizi</a>
+    <!-- Sottomenu mobile Soluzioni -->
+    <div class="drawer-dropdown">
+      <button class="drawer-dropdown-trigger">
+        Soluzioni
+        <i class="ti ti-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="drawer-dropdown-submenu">
+        <a href="automazioni.html">Automazioni</a>
+        <a href="gestionali.html">Gestionali</a>
+        <a href="sitiweb.html">Siti Web</a>
+      </div>
+    </div>
+    <a href="#processo">Come lavoro</a>
+    <a href="#progetti">Progetti</a>
+    <a href="#chi-sono">Chi sono</a>
+    <a href="#contatti">Contatti</a>
+  </div>
+
+  <!-- HERO -->
+  <section class="hero hero--index" id="hero">
+    <div class="hero-bg-image"></div>
+    <svg class="hero-pattern" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="circuit-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+          <path d="M0 40 H70 L80 30 H130 L140 40 H200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M80 0 V30" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M140 40 V90 H180 V120" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M0 120 H40 V160 H90" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M90 120 V200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M160 160 H200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M160 160 V200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <circle cx="80" cy="30" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="140" cy="40" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="180" cy="120" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="90" cy="120" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="40" cy="160" r="2" fill="#00d4ff" opacity="0.15" />
+          <circle cx="160" cy="160" r="3" fill="#00d4ff" opacity="0.18" />
+          <rect x="76" y="26" width="8" height="8" rx="1" fill="none" stroke="#00d4ff" stroke-width="0.6"
+            opacity="0.1" />
+          <rect x="86" y="116" width="8" height="8" rx="1" fill="none" stroke="#00d4ff" stroke-width="0.6"
+            opacity="0.1" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuit-pattern)" />
+    </svg>
+    <div class="container hero-layout">
+      <!-- Colonna sinistra: contenuto testuale -->
+      <div class="hero-content">
+        <p class="hero-payoff">Il lavoro di un giorno. fatto In pochi minuti.</p>
+        <h1>Smetti di perdere ore del tuo tempo su lavori che puoi automatizzare.</h1>
+        <p class="hero-sub">Costruisco SITI WEB, AUTOMAZIONI e GESTIONALI su misura che lavorano per te. Veloci,
+          precisi e
+          sempre operativi.</p>
+        <div class="hero-tags">
+          <span class="hero-tag">&#10003; Sito web pronto in 1 settimana</span>
+          <span class="hero-tag">&#10003; Automazioni da 500&euro;</span>
+          <span class="hero-tag">&#10003; Sempre io, l'unica persona di riferimento</span>
+        </div>
+        <div class="hero-cta-row">
+          <a href="#contatti" class="btn-primary">Parliamone</a>
+          <p class="hero-micro">Nessun impegno. Rispondo entro 24 ore.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIZI -->
+  <section class="services section-fade" id="servizi">
+    <div class="container">
+      <div class="section-header">
+        <h2>Cosa potresti migliorare</h2>
+        <p>Ogni PMI ha almeno uno di questi problemi. Forse &egrave; anche uno dei tuoi. Vediamo insieme.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ti ti-calendar-cancel" aria-hidden="true"></i>
+          </div>
+          <h3>Perdi clienti perché non hai modo di prenotare online.</h3>
+          <p>Un sistema di prenotazione online che lavora al posto tuo, anche la domenica e a qualsiasi ora della
+            giornata.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ti ti-robot" aria-hidden="true"></i>
+          </div>
+          <h3>Sprechi ore ogni settimana su lavori che potrebbero essere fatti in automatico.</h3>
+          <p>Automazioni su misura che gestiscono email, WhatsApp, documenti, report e solleciti — senza che tu debba
+            fare nulla.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ti ti-alarm" aria-hidden="true"></i>
+          </div>
+          <h3>Dimentichi spesso scadenze, cosa è in ritardo e cosa sta per sfuggirti.</h3>
+          <p>Una dashboard che ti mostra tutto in tempo reale — scadenze, pagamenti, pratiche aperte.</p>
+        </div>
+
+        <div class="service-card">
+          <div class="service-icon">
+            <i class="ti ti-user-off" aria-hidden="true"></i>
+          </div>
+          <h3>I tuoi clienti vengono una volta e poi si dimenticano di ritornare.</h3>
+          <p>Email e messaggi WhatsApp automatici che riportano i clienti da te nel momento giusto.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- COME LAVORO -->
+  <section class="process section-fade" id="processo">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2>Come lavoro</h2>
+        <p>Con me non parli mai con un account che passa il lavoro a qualcun altro. Dall'analisi alla consegna, ci sono
+          sempre io.</p>
+      </div>
+      <div class="process-steps">
+
+        <div class="process-step">
+          <div class="step-number">1</div>
+          <div class="step-content">
+            <h3>Ascolto</h3>
+            <p>Una breve chiacchierata per capire bene cosa fai e come lavori. Nessun questionario, nessuna perdita di
+              tempo.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">2</div>
+          <div class="step-content">
+            <h3>Analisi</h3>
+            <p>Ti dico esattamente dove stai perdendo tempo e ti faccio una stima concreta del risultato.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">3</div>
+          <div class="step-content">
+            <h3>Progettazione</h3>
+            <p>Costruisco la soluzione al tuo problema
+              basandomi sulle tue esigenze.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">4</div>
+          <div class="step-content">
+            <h3>Sviluppo</h3>
+            <p>Lo costruisco nei tempi concordati. Senza sorprese sul preventivo.</p>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <div class="step-number">5</div>
+          <div class="step-content">
+            <h3>Consegna</h3>
+            <p>Ti consegno qualcosa che sai usare. E ti affianco finch&eacute; non sei autonomo.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section class="portfolio section-fade" id="progetti">
+    <div class="container">
+      <div class="section-header">
+        <h2>Progetti</h2>
+        <p>Casi reali e progetti dimostrativi su settori specifici.</p>
+      </div>
+
+      <!-- Casi reali -->
+      <div class="portfolio-real">
+
+        <div class="portfolio-card">
+          <span class="portfolio-badge portfolio-badge--real">Caso reale</span>
+          <h3>Co.Ver. Srl — Gestionale Parco Mezzi</h3>
+          <p class="portfolio-sector">Edilizia / Impiantistica &middot; Roma</p>
+          <p class="portfolio-label">Problema</p>
+          <p>Gestione di 40 mezzi e 15 cantieri su carta ed Excel. Scadenze perse, rapportini manuali, zero
+            visibilit&agrave; in tempo reale.</p>
+          <p class="portfolio-label">Soluzione</p>
+          <p>Gestionale web con dashboard, assegnazioni giornaliere, alert scadenze automatici, reportistica digitale.
+            Oggi tutto &egrave; sotto controllo da un'unica schermata, anche dal cantiere.</p>
+          <a href="#" class="btn-outline">Vedi progetto</a>
+        </div>
+
+        <div class="portfolio-card">
+          <span class="portfolio-badge portfolio-badge--real">Caso reale</span>
+          <h3>Antonio Manno — Portfolio Fotografo</h3>
+          <p class="portfolio-sector">Fotografia Professionale &middot; Roma</p>
+          <p class="portfolio-label">Problema</p>
+          <p>114.000+ immagini in archivio e nessun modo per mostrarle online in modo professionale e veloce.</p>
+          <p class="portfolio-label">Soluzione</p>
+          <p>Sito portfolio con galleria ad alte prestazioni. Script Python dedicato per ottimizzare 300+ immagini:
+            thumbnails 400x400 WebP e full ottimizzate generate in automatico. Quello che a mano richiederebbe giorni,
+            lo script lo fa in minuti su qualsiasi volume.</p>
+          <a href="#" class="btn-outline">Vedi progetto</a>
+        </div>
+
+      </div>
+
+      <!-- Demo -->
+      <div class="portfolio-demos">
+
+        <div class="portfolio-card">
+          <div class="portfolio-demo-color demo-ristorazione"></div>
+          <span class="portfolio-badge portfolio-badge--demo">Demo &middot; In costruzione</span>
+          <h3>Ristorante — Sistema Prenotazioni</h3>
+          <p class="portfolio-sector">Ristorazione</p>
+          <span class="btn-disabled" data-tooltip="Demo in costruzione">Vedi progetto</span>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-demo-color demo-edilizia"></div>
+          <span class="portfolio-badge portfolio-badge--demo">Demo &middot; In costruzione</span>
+          <h3>Impresa Edile — Gestionale Cantieri</h3>
+          <p class="portfolio-sector">Edilizia</p>
+          <span class="btn-disabled" data-tooltip="Demo in costruzione">Vedi progetto</span>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-demo-color demo-professionale"></div>
+          <span class="portfolio-badge portfolio-badge--demo">Demo &middot; In costruzione</span>
+          <h3>Studio Professionale — Appuntamenti Online</h3>
+          <p class="portfolio-sector">Servizi Professionali</p>
+          <span class="btn-disabled" data-tooltip="Demo in costruzione">Vedi progetto</span>
+        </div>
+
+        <div class="portfolio-card">
+          <div class="portfolio-demo-color demo-ristorazione"></div>
+          <span class="portfolio-badge portfolio-badge--demo">Demo &middot; In costruzione</span>
+          <h3>Pizzeria — Menu Digitale e Ordini Online</h3>
+          <p class="portfolio-sector">Ristorazione</p>
+          <span class="btn-disabled" data-tooltip="Demo in costruzione">Vedi progetto</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BANNER CTA -->
+  <section class="banner-cta-section section-fade">
+    <div class="container">
+      <div class="banner-cta">
+        <div class="banner-cta-text">
+          <p class="banner-cta-eyebrow">Hai un progetto in mente?</p>
+          <p class="banner-cta-title">Costa zero scoprire se posso aiutarti.</p>
+          <p class="banner-cta-sub">Ricevi una DEMO entro 3 giorni. Nessuno impegno</p>
+        </div>
+        <a href="#contatti" class="btn-primary">Richiedi una Demo GRATUITA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CHI SONO -->
+  <section class="about section-fade" id="chi-sono">
+    <div class="container">
+      <div class="section-header">
+        <h2>Chi sono</h2>
+      </div>
+      <div class="about-layout">
+        <div class="about-left">
+          <div class="about-photo">
+            <img src="assets/foto-gino.webp" alt="Gino Manno — GM Studio Lab" class="about-photo-img">
+          </div>
+
+          <div class="about-accordion">
+
+            <div class="acc-item">
+              <button class="acc-header" aria-expanded="false">
+                <i class="ti ti-certificate" aria-hidden="true"></i>
+                <strong>Certificazione</strong>
+                <i class="ti ti-chevron-down acc-icon" aria-hidden="true"></i>
+              </button>
+              <div class="acc-body">
+                <strong>PROGETTISTA DI SOLUZIONI E-COMMERCE</strong><br>
+                E-Commerce<br>
+                ECO.FORMIT / ITALDATA SPA<br>
+                Universit&agrave; "Federico II" &middot; Napoli<br>
+                2002/03 — con lode
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-header" aria-expanded="false">
+                <i class="ti ti-school" aria-hidden="true"></i>
+                <strong>Laurea</strong>
+                <i class="ti ti-chevron-down acc-icon" aria-hidden="true"></i>
+              </button>
+              <div class="acc-body">
+                <strong>CONSERVAZIONE DI BENI CULTURALI</strong><br>
+                II Universit&agrave; di Napoli<br>
+                4 luglio 2006 — 100/110
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-header" aria-expanded="false">
+                <i class="ti ti-award" aria-hidden="true"></i>
+                <strong>Attestato</strong>
+                <i class="ti ti-chevron-down acc-icon" aria-hidden="true"></i>
+              </button>
+              <div class="acc-body">
+                <strong>OPERATORE GRAFICO</strong><br>
+                I.T.C. Cesare Pavese &middot; Caserta<br>
+                2008/09 — 60h di insegnamento
+              </div>
+            </div>
+
+            <div class="acc-item">
+              <button class="acc-header" aria-expanded="false">
+                <i class="ti ti-brain" aria-hidden="true"></i>
+                <strong>Certificazione</strong>
+                <i class="ti ti-chevron-down acc-icon" aria-hidden="true"></i>
+              </button>
+              <div class="acc-body">
+                <strong>AI + PROMPT ENGINEER Level 1</strong>
+                </span><br>
+                AI CERTs
+                AI+ Prompt Engineer Level 1&trade;<br>
+                AI+ Everyone&trade;<br>
+                2025/26 — Ist. Volta
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="about-text">
+          <div class="about-text-body">
+            <p>Mi chiamo Gino Manno.</p>
+
+            <p>Ho iniziato a lavorare come grafico
+              in aziende tipolitografiche nel 1998.</p>
+
+            <ul class="about-list about-keypoints">
+              <li class=>Nel 2002, grazie alla certificazione di specializzazione tecnica superiore in
+                "<strong>PROGETTISTA DI SOLUZIONI E-COMMERCE</strong>" conseguita con lode, ho iniziato a costruire siti
+                web quando in Italia erano ancora in pochi a capire come strutturare un sito web per aziende.</li>
+              <li class="about-subitem"><em>Descrizione del corso: Professionista capace di guidare aziende e
+                  individui nella comprensione e gestione dell'immagine aziendale online e della pubblicit&agrave;
+                  digitale. Valuta criticamente le diverse soluzioni e proposte da terzi. Si rivolge in particolar modo
+                  a chi deve gestire strategie digitali aziendali.</em></li>
+              <li class="about-subitem"><em>Competenze tecnico-professionali: Uso del personal computer e dei
+                  principali applicativi; Conoscenza del sistema operativo e dei programmi per l'integrazione in rete;
+                  Creazione di strategie economiche e misurazione dei risultati; Definizione e progettazione del sito
+                  web aziendale; Amministrazione del sito in funzione degli obiettivi strategici.</em></li>
+              <li class=>Nel 2006 ho conseguito una <strong>LAUREA IN CONSERVAZIONE DEI BENI
+                  CULTURALI</strong> presso la II Universit&agrave; degli Studi di Napoli. Il che significa che ho
+                passato anni a studiare come le immagini e gli oggetti comunicano significati prima ancora di imparare a
+                costruirli digitalmente.</li>
+              <li class=>Nel 2009 ho insegnato grafica editoriale
+                presso I.T.C. Cesare Pavese di Caserta, elaborando con una classe III tra lezioni e laboratori
+                informatici un
+                giornale scolastico. Questo mi ha permesso di conseguire l'attestato in "<strong>OPERATORE
+                  GRAFICO</strong>".</li>
+              <li class=>nel 2026 mi sono specializzato in <strong>ARTIFICIAL INTELLIGENCE FOR PROFESSIONALS</strong>:
+                un corso
+                progettato per professionisti,
+                manager e consulenti che non vogliono solo
+                "usare" l'Intelligenza Artificiale, ma implementarla
+                strategicamente per rivoluzionare la produttività,
+                automatizzare i processi e generare un vantaggio
+                competitivo. Padroneggiare le tecniche
+                di AI per generare report complessi, creare
+                materiale formativo multimodale, automatizzare
+                workflow operativi, sviluppare tool aziendali e
+                implementare soluzioni personalizzate</li>
+            </ul>
+          </div>
+
+          <div class="about-citations">
+            <p class="about-highlight">
+              Tutto questo mi ha insegnato una cosa:
+              i problemi delle imprese reali non si
+              risolvono con la tecnologia pi&ugrave; nuova.
+              Si risolvono capendo come funziona
+              davvero il lavoro di chi hai davanti.
+            </p>
+
+            <blockquote class="about-quote">
+              "Non sono un'agenzia. Sono una persona
+              sola che segue tutto — dall'analisi
+              alla consegna. E questa &egrave; la ragione
+              per cui i miei clienti mi scelgono."
+            </blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATTI -->
+  <section class="contact section-fade" id="contatti">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2>Parliamone</h2>
+        <p>Parlami del tuo problema in due righe. Non serve un brief formale — basta capire dove stai perdendo tempo o
+          clienti.</p>
+      </div>
+
+      <div class="contact-wrapper">
+        <div class="contact-layout">
+          <div class="contact-form-wrapper">
+            <form id="contactForm" novalidate>
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input type="text" id="name" name="name" placeholder="Nome" autocomplete="name">
+              </div>
+              <div class="form-group">
+                <label for="email">Email <span class="required">*</span></label>
+                <input type="email" id="email" name="email" placeholder="Email" required autocomplete="email">
+              </div>
+              <div class="form-group">
+                <label for="area">
+                  Area di interesse
+                </label>
+                <select id="area" name="area" class="form-select">
+                  <option value="" disabled selected>
+                    Seleziona un'area
+                  </option>
+                  <option value="automazioni">Automazioni</option>
+                  <option value="gestionali">Gestionali</option>
+                  <option value="sitiweb">Sito Web</option>
+                  <option value="demo">
+                    Demo gratuita
+                  </option>
+                  <option value="altro">Altro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Messaggio</label>
+                <textarea id="message" name="message"
+                  placeholder="Descrivi brevemente cosa vorresti migliorare nel tuo lavoro o nella tua presenza online"></textarea>
+              </div>
+              <button type="submit" class="btn-primary form-submit">Mandami un messaggio</button>
+              <div class="form-success" id="formSuccess">Messaggio inviato! Ti rispondo entro 24 ore.</div>
+            </form>
+          </div>
+
+          <div class="contact-info">
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 0C5.373 0 0 5.373 0 12c0 2.122.553 4.168 1.602 5.98L0 24l6.233-1.578A11.941 11.941 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.957 0-3.867-.527-5.53-1.524l-.396-.235-3.698.936.982-3.584-.26-.413A9.763 9.763 0 0 1 2.182 12 9.818 9.818 0 0 1 12 2.182 9.818 9.818 0 0 1 21.818 12 9.818 9.818 0 0 1 12 21.818z" />
+              </svg>
+              <a href="https://wa.me/393332207306" target="_blank" rel="noopener">333 220 7306</a>
+            </div>
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              <a href="mailto:info@gmstudiolab.it">info@gmstudiolab.it</a>
+            </div>
+            <div class="contact-info-item">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+                stroke-width="1.5" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
+              </svg>
+              <span>Roma</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="assets/logo-GM-white.svg" alt="GM Studio Lab" class="footer-logo">
+      <p class="footer-copy">
+        &copy; 2026 GM Studio Lab — Gino Manno
+      </p>
+      <p class="footer-piva">P.IVA — 18586301006</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP WIDGET -->
+  <a href="https://wa.me/393332207306?text=Ciao%20Gino%2C%20ti%20scrivo%20dal%20sito%20gmstudiolab.it" target="_blank"
+    rel="noopener" class="wa-widget" aria-label="Contattami su WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.122.553 4.168 1.602 5.98L0 24l6.233-1.578A11.941 11.941 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.957 0-3.867-.527-5.53-1.524l-.396-.235-3.698.936.982-3.584-.26-.413A9.763 9.763 0 0 1 2.182 12 9.818 9.818 0 0 1 12 2.182 9.818 9.818 0 0 1 21.818 12 9.818 9.818 0 0 1 12 21.818z" />
+    </svg>
+  </a>
+
+  <script src="main.js"></script>
+</body>
+
+</html>

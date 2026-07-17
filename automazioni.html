@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Automazioni — GM Studio Lab</title>
+  <meta name="description"
+    content="Automazioni su misura per PMI: email, WhatsApp, fatturazione, report automatici. Il lavoro di un giorno, fatto in pochi minuti.">
+
+  <meta property="og:title" content="Automazioni — GM Studio Lab">
+  <meta property="og:description"
+    content="Automazioni su misura per PMI italiane. Email, report, solleciti — tutto automatico.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gmstudiolab.it/automazioni">
+  <meta property="og:locale" content="it_IT">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" aria-label="GM Studio Lab - Home">
+        <img src="assets/logo-GMsito.svg" alt="GM Studio Lab" class="navbar-logo">
+      </a>
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#servizi">Servizi</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Soluzioni
+            <i class="ti ti-chevron-down nav-dropdown-icon" aria-hidden="true"></i>
+          </button>
+          <div class="nav-dropdown-panel" role="menu">
+            <a href="automazioni.html" class="nav-dropdown-item nav-dropdown-item--active" role="menuitem">
+              <i class="ti ti-settings-automation" aria-hidden="true"></i>
+              <span>
+                <strong>Automazioni</strong>
+                <small>Processi automatici che lavorano per te</small>
+              </span>
+            </a>
+            <a href="gestionali.html" class="nav-dropdown-item" role="menuitem">
+              <i class="ti ti-layout-dashboard" aria-hidden="true"></i>
+              <span>
+                <strong>Gestionali</strong>
+                <small>Software su misura per la tua attività</small>
+              </span>
+            </a>
+            <a href="sitiweb.html" class="nav-dropdown-item" role="menuitem">
+              <i class="ti ti-world-www" aria-hidden="true"></i>
+              <span>
+                <strong>Siti Web</strong>
+                <small>Presenza digitale che lavora per te</small>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="index.html#processo">Come lavoro</a>
+        <a href="index.html#progetti">Progetti</a>
+        <a href="index.html#chi-sono">Chi sono</a>
+        <a href="index.html#contatti">Contatti</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Drawer mobile -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html">Home</a>
+    <a href="index.html#servizi">Servizi</a>
+    <div class="drawer-dropdown">
+      <button class="drawer-dropdown-trigger">
+        Soluzioni
+        <i class="ti ti-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="drawer-dropdown-submenu">
+        <a href="automazioni.html" class="active">Automazioni</a>
+        <a href="gestionali.html">Gestionali</a>
+        <a href="sitiweb.html">Siti Web</a>
+      </div>
+    </div>
+    <a href="index.html#processo">Come lavoro</a>
+    <a href="index.html#progetti">Progetti</a>
+    <a href="index.html#chi-sono">Chi sono</a>
+    <a href="index.html#contatti">Contatti</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero--aut" id="hero">
+    <div class="hero-bg-image"></div>
+    <svg class="hero-pattern" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="circuit-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+          <path d="M0 40 H70 L80 30 H130 L140 40 H200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M80 0 V30" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M140 40 V90 H180 V120" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M0 120 H40 V160 H90" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M90 120 V200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M160 160 H200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M160 160 V200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <circle cx="80" cy="30" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="140" cy="40" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="180" cy="120" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="90" cy="120" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="40" cy="160" r="2" fill="#00d4ff" opacity="0.15" />
+          <circle cx="160" cy="160" r="3" fill="#00d4ff" opacity="0.18" />
+          <rect x="76" y="26" width="8" height="8" rx="1" fill="none" stroke="#00d4ff" stroke-width="0.6"
+            opacity="0.1" />
+          <rect x="86" y="116" width="8" height="8" rx="1" fill="none" stroke="#00d4ff" stroke-width="0.6"
+            opacity="0.1" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuit-pattern)" />
+    </svg>
+
+    <div class="container hero-layout">
+      <div class="hero-content">
+        <p class="hero-payoff">Automazioni</p>
+        <h1>Excel, WhatsApp, Drive o peggio ancora appunti su carta... Sei sicuro che la tua attività si gestisca così?
+        </h1>
+        <p class="hero-sub">Un'automazione è un sistema che fa al posto tuo i lavori ripetitivi, manuali e obsoleti —
+          email, promemoria, documenti, notifiche. Lo imposti una volta, lavora per sempre, tutti i giorni, h24.</p>
+        <div class="hero-cta-row">
+          <a href="index.html#contatti" class="btn-primary">Richiedi una Demo GRATUITA</a>
+        </div>
+        <p class="hero-micro">Entro 3 giorni ricevi un link. Apri il browser e vedi come funziona nel tuo settore.
+          Gratis.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IL PROBLEMA ===== -->
+  <section class="aut-problems section-fade" id="problemi">
+    <div class="container">
+      <div class="section-header">
+        <h2>Riconosci qualcuna di queste situazioni?</h2>
+        <p>Se sì, stai perdendo tempo ogni giorno su cose che un sistema automatico potrebbe fare al posto tuo.</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <i class="ti ti-clock" aria-hidden="true"></i>
+          <p>Ogni settimana passo ore a mandare email di sollecito ai clienti in ritardo con i pagamenti — a mano, una
+            per una.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-phone-off" aria-hidden="true"></i>
+          <p>Dimentico di richiamare clienti che mi hanno chiesto un preventivo. Quando lo faccio è troppo tardi.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-calendar-x" aria-hidden="true"></i>
+          <p>Confermare un appuntamento richiede tre messaggi avanti e indietro. Ogni volta.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-file-invoice" aria-hidden="true"></i>
+          <p>Quando finisco un lavoro devo ricordarmi io di mandare la fattura. A volte me ne dimentico.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-brand-instagram" aria-hidden="true"></i>
+          <p>Le foto e gli aggiornamenti sui social li pubblico solo quando ho tempo — cioè quasi mai.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-users" aria-hidden="true"></i>
+          <p>I clienti vengono una volta e poi spariscono. Non ho un sistema per tenerli aggiornati o per farli tornare.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COME FUNZIONA UN'AUTOMAZIONE ===== -->
+  <section class="aut-how section-fade" id="come-funziona">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2>Come funziona un'automazione</h2>
+        <p>Tre concetti. Nessun gergo. Segui la scintilla.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROBLEMI PER SETTORE ===== -->
+  <section class="aut-cases section-fade" id="casi">
+    <div class="container">
+      <div class="section-header">
+        <h2>Problemi reali che potremmo risolvere insieme</h2>
+        <p>Settori diversi, stesso principio: automatizzare quello che oggi fai a mano.</p>
+      </div>
+      <div class="cases-grid">
+
+        <div class="case-card">
+          <span class="case-badge">Edilizia / Impiantistica</span>
+          <h3 class="case-title">Scadenze e rapportini su carta</h3>
+          <p>Un'azienda con oltre 40 mezzi e 15 cantieri attivi potrebbe ricevere alert automatici 72 ore prima di ogni
+            scadenza e generare report settimanali senza aprire Excel.</p>
+        </div>
+
+        <div class="case-card">
+          <span class="case-badge">Gestione Condominiale</span>
+          <h3 class="case-title">Comunicazioni disperse ovunque</h3>
+          <p>Uno studio con oltre 10 condomini in gestione potrebbe automatizzare convocazioni assemblee, solleciti
+            quote e avvisi manutenzione — tutto tracciato, niente perso.</p>
+        </div>
+
+        <div class="case-card">
+          <span class="case-badge">Servizi alla Persona</span>
+          <h3 class="case-title">Clienti che non tornano</h3>
+          <p>Un salone potrebbe inviare un'email automatica dopo 45 giorni dall'ultima visita con un'offerta
+            personalizzata. Zero lavoro manuale.</p>
+        </div>
+
+        <div class="case-card">
+          <span class="case-badge">Intrattenimento / Eventi</span>
+          <h3 class="case-title">Nessun follow-up dopo la visita</h3>
+          <p>Un centro eventi potrebbe raccogliere i dati all'ingresso e inviare automaticamente un'offerta un mese
+            prima del compleanno dei figli dei clienti.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COSA AUTOMATIZZIAMO INSIEME ===== -->
+  <section class="aut-skills section-fade" id="cosa-automatizziamo">
+    <div class="container">
+      <div class="section-header">
+        <h2>Cosa automatizziamo insieme</h2>
+        <p>Clicca su ogni voce per vedere i dettagli. A destra le ore che recuperi ogni settimana.</p>
+      </div>
+      <div class="auto-grid">
+
+        <!-- 1. Comunicazione — Email -->
+        <div class="auto-item">
+          <div class="auto-header">
+            <i class="ti ti-mail auto-icon"></i>
+            <span class="auto-title">Email follow-up e solleciti</span>
+            <span class="auto-badge">2–3h</span>
+            <i class="ti ti-chevron-down auto-chevron"></i>
+          </div>
+          <div class="auto-body">
+            <div class="auto-body-inner">
+              <ul>
+                <li>Niente più email scritte una per una</li>
+                <li>Il sistema sa chi deve ricevere cosa e quando</li>
+                <li>Testi già pronti, inviati all'ora giusta</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2. Comunicazione — WhatsApp -->
+        <div class="auto-item">
+          <div class="auto-header">
+            <i class="ti ti-brand-whatsapp auto-icon"></i>
+            <span class="auto-title">Messaggi WhatsApp automatici</span>
+            <span class="auto-badge">1–2h</span>
+            <i class="ti ti-chevron-down auto-chevron"></i>
+          </div>
+          <div class="auto-body">
+            <div class="auto-body-inner">
+              <ul>
+                <li>Conferme e promemoria senza toccare il telefono</li>
+                <li>Il cliente riceve il messaggio al momento giusto</li>
+                <li>Zero copia-incolla manuali</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3. Amministrazione — Fatturazione -->
+        <div class="auto-item">
+          <div class="auto-header">
+            <i class="ti ti-file-invoice auto-icon"></i>
+            <span class="auto-title">Fatturazione automatica</span>
+            <span class="auto-badge">1–2h</span>
+            <i class="ti ti-chevron-down auto-chevron"></i>
+          </div>
+          <div class="auto-body">
+            <div class="auto-body-inner">
+              <ul>
+                <li>La fattura parte da sola a lavoro concluso</li>
+                <li>Niente dimenticate, niente in ritardo</li>
+                <li>Archivio aggiornato in automatico</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4. Amministrazione — Scadenze -->
+        <div class="auto-item">
+          <div class="auto-header">
+            <i class="ti ti-alert-triangle auto-icon"></i>
+            <span class="auto-title">Alert scadenze e pagamenti</span>
+            <span class="auto-badge">1h</span>
+            <i class="ti ti-chevron-down auto-chevron"></i>
+          </div>
+          <div class="auto-body">
+            <div class="auto-body-inner">
+              <ul>
+                <li>Ricevi l'avviso prima che sia troppo tardi</li>
+                <li>Il sollecito parte da solo, senza che tu ci pensi</li>
+                <li>Zero scadenze dimenticate</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5. Controllo — Report -->
+        <div class="auto-item">
+          <div class="auto-header">
+            <i class="ti ti-chart-bar auto-icon"></i>
+            <span class="auto-title">Report settimanali</span>
+            <span class="auto-badge">2h</span>
+            <i class="ti ti-chevron-down auto-chevron"></i>
+          </div>
+          <div class="auto-body">
+            <div class="auto-body-inner">
+              <ul>
+                <li>Il lunedì trovi già il riepilogo in email</li>
+                <li>Dati reali aggiornati, senza fare nulla</li>
+                <li>Decidi guardando i numeri, non a occhio</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6. Operatività — Ordini -->
+        <div class="auto-item">
+          <div class="auto-header">
+            <i class="ti ti-clipboard-list auto-icon"></i>
+            <span class="auto-title">Gestione ordini e richieste</span>
+            <span class="auto-badge">2h</span>
+            <i class="ti ti-chevron-down auto-chevron"></i>
+          </div>
+          <div class="auto-body">
+            <div class="auto-body-inner">
+              <ul>
+                <li>Ogni richiesta va alla persona giusta in automatico</li>
+                <li>Niente post-it, email perse o chiamate mancate</li>
+                <li>Stato aggiornato in tempo reale</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7. Marketing — Fidelizzazione -->
+        <div class="auto-item">
+          <div class="auto-header">
+            <i class="ti ti-users auto-icon"></i>
+            <span class="auto-title">Fidelizzazione clienti</span>
+            <span class="auto-badge">1–2h</span>
+            <i class="ti ti-chevron-down auto-chevron"></i>
+          </div>
+          <div class="auto-body">
+            <div class="auto-body-inner">
+              <ul>
+                <li>Il sistema riconosce chi sta per abbandonarti</li>
+                <li>Offerta personalizzata al momento giusto</li>
+                <li>Fai tornare i clienti senza muovere un dito</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8. Marketing — Social -->
+        <div class="auto-item">
+          <div class="auto-header">
+            <i class="ti ti-brand-instagram auto-icon"></i>
+            <span class="auto-title">Pubblicazione social</span>
+            <span class="auto-badge">2–3h</span>
+            <i class="ti ti-chevron-down auto-chevron"></i>
+          </div>
+          <div class="auto-body">
+            <div class="auto-body-inner">
+              <ul>
+                <li>Pianifichi una volta, pubblica da solo per settimane</li>
+                <li>Tutti i canali aggiornati dallo stesso posto</li>
+                <li>Zero ore perse sui social</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Totale ore -->
+      <div class="auto-total">
+        <p class="auto-total-num">Fino a 15–20 ore risparmiate ogni settimana.</p>
+        <p class="auto-total-sub">Ore che puoi dedicare alla tua attività — o alla tua vita.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANNER CTA ===== -->
+  <section class="banner-cta-wrap banner-cta-wrap--aut section-fade">
+    <div class="container">
+      <div class="banner-cta">
+        <div class="banner-left">
+          <p class="banner-eyebrow">HAI UN PROGETTO IN MENTE?</p>
+          <p class="banner-main">Entro 3 giorni ricevi un link<br>con la tua DEMO. Gratis. Nessun impegno.</p>
+        </div>
+        <div class="banner-center">
+          Costruisco un prototipo funzionante nel tuo settore, con dati realistici. Lo vedi, lo provi, poi decidi.
+        </div>
+        <a href="index.html#contatti" class="btn-primary banner-btn">Richiedi la Demo GRATUITA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="assets/logo-GM-white.svg" alt="GM Studio Lab" class="footer-logo">
+      <p class="footer-copy">
+        &copy; 2026 GM Studio Lab — Gino Manno
+      </p>
+      <p class="footer-piva">P.IVA — 18586301006</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP WIDGET -->
+  <a href="https://wa.me/393332207306?text=Ciao%20Gino%2C%20ti%20scrivo%20dal%20sito%20gmstudiolab.it" target="_blank"
+    rel="noopener" class="wa-widget" aria-label="Contattami su WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.122.553 4.168 1.602 5.98L0 24l6.233-1.578A11.941 11.941 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.957 0-3.867-.527-5.53-1.524l-.396-.235-3.698.936.982-3.584-.26-.413A9.763 9.763 0 0 1 2.182 12 9.818 9.818 0 0 1 12 2.182 9.818 9.818 0 0 1 21.818 12 9.818 9.818 0 0 1 12 21.818z" />
+    </svg>
+  </a>
+
+</body>
+
+</html>

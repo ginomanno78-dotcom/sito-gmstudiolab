@@ -1,0 +1,5 @@
+# Cartelle locali / strumenti
+.claude/
+
+# Script temporanei di sviluppo
+_parse_svg_x.py

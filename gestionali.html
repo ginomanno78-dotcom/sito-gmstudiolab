@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestionali — GM Studio Lab</title>
+  <meta name="description"
+    content="Gestionali su misura per la tua attività: costruiti su come lavori tu — i tuoi dati, i tuoi flussi, le tue regole.">
+
+  <meta property="og:title" content="Gestionali — GM Studio Lab">
+  <meta property="og:description"
+    content="Software gestionali su misura per PMI italiane. Costruiti sui tuoi processi reali.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gmstudiolab.it/gestionali">
+  <meta property="og:locale" content="it_IT">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&family=Montserrat:wght@500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js" defer></script>
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="container navbar-inner">
+      <a href="index.html" aria-label="GM Studio Lab - Home">
+        <img src="assets/logo-GMsito.svg" alt="GM Studio Lab" class="navbar-logo">
+      </a>
+      <div class="navbar-links">
+        <a href="index.html">Home</a>
+        <a href="index.html#servizi">Servizi</a>
+        <div class="nav-dropdown">
+          <button class="nav-dropdown-trigger" aria-expanded="false" aria-haspopup="true">
+            Soluzioni
+            <i class="ti ti-chevron-down nav-dropdown-icon" aria-hidden="true"></i>
+          </button>
+          <div class="nav-dropdown-panel" role="menu">
+            <a href="automazioni.html" class="nav-dropdown-item" role="menuitem">
+              <i class="ti ti-settings-automation" aria-hidden="true"></i>
+              <span>
+                <strong>Automazioni</strong>
+                <small>Processi automatici che lavorano per te</small>
+              </span>
+            </a>
+            <a href="gestionali.html" class="nav-dropdown-item nav-dropdown-item--active" role="menuitem">
+              <i class="ti ti-layout-dashboard" aria-hidden="true"></i>
+              <span>
+                <strong>Gestionali</strong>
+                <small>Software su misura per la tua attività</small>
+              </span>
+            </a>
+            <a href="sitiweb.html" class="nav-dropdown-item" role="menuitem">
+              <i class="ti ti-world-www" aria-hidden="true"></i>
+              <span>
+                <strong>Siti Web</strong>
+                <small>Presenza digitale che lavora per te</small>
+              </span>
+            </a>
+          </div>
+        </div>
+        <a href="index.html#processo">Come lavoro</a>
+        <a href="index.html#progetti">Progetti</a>
+        <a href="index.html#chi-sono">Chi sono</a>
+        <a href="index.html#contatti">Contatti</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Apri menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Drawer mobile -->
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+  <div class="mobile-drawer" id="mobileDrawer">
+    <a href="index.html">Home</a>
+    <a href="index.html#servizi">Servizi</a>
+    <div class="drawer-dropdown">
+      <button class="drawer-dropdown-trigger">
+        Soluzioni
+        <i class="ti ti-chevron-down" aria-hidden="true"></i>
+      </button>
+      <div class="drawer-dropdown-submenu">
+        <a href="automazioni.html">Automazioni</a>
+        <a href="gestionali.html" class="active">Gestionali</a>
+        <a href="sitiweb.html">Siti Web</a>
+      </div>
+    </div>
+    <a href="index.html#processo">Come lavoro</a>
+    <a href="index.html#progetti">Progetti</a>
+    <a href="index.html#chi-sono">Chi sono</a>
+    <a href="index.html#contatti">Contatti</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero hero--gest" id="hero">
+    <div class="hero-bg-image"></div>
+    <svg class="hero-pattern" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <pattern id="circuit-pattern" x="0" y="0" width="200" height="200" patternUnits="userSpaceOnUse">
+          <path d="M0 40 H70 L80 30 H130 L140 40 H200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M80 0 V30" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M140 40 V90 H180 V120" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M0 120 H40 V160 H90" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M90 120 V200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M160 160 H200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <path d="M160 160 V200" stroke="#00d4ff" stroke-width="1" fill="none" opacity="0.12" />
+          <circle cx="80" cy="30" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="140" cy="40" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="180" cy="120" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="90" cy="120" r="3" fill="#00d4ff" opacity="0.18" />
+          <circle cx="40" cy="160" r="2" fill="#00d4ff" opacity="0.15" />
+          <circle cx="160" cy="160" r="3" fill="#00d4ff" opacity="0.18" />
+          <rect x="76" y="26" width="8" height="8" rx="1" fill="none" stroke="#00d4ff" stroke-width="0.6"
+            opacity="0.1" />
+          <rect x="86" y="116" width="8" height="8" rx="1" fill="none" stroke="#00d4ff" stroke-width="0.6"
+            opacity="0.1" />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#circuit-pattern)" />
+    </svg>
+
+    <div class="container hero-layout">
+      <div class="hero-content">
+        <p class="hero-payoff">Gestionali</p>
+
+        <h1>Smetti di rincorrere le informazioni.<br>Centralizza tutta la tua azienda<br>in un unico pannello di
+          controllo.</h1>
+
+        <p class="hero-sub">Un gestionale su misura è uno strumento digitale costruito esattamente su come lavori tu —
+          su i tuoi dati, i tuoi flussi, le tue regole.</p>
+
+        <a href="index.html#contatti" class="btn-primary">Richiedi una Demo GRATUITA</a>
+
+        <p class="hero-micro">Entro 3 giorni ricevi un link con il prototipo del tuo gestionale. GRATIS. Senza impegno.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IL PROBLEMA ===== -->
+  <section class="aut-problems section-fade" id="problemi">
+    <div class="container">
+      <div class="section-header">
+        <h2>Cosa succede quando usi strumenti non pensati per te</h2>
+        <p>Situazioni che conosci già. Problemi che si risolvono.</p>
+      </div>
+      <div class="problem-grid">
+        <div class="problem-card">
+          <i class="ti ti-table" aria-hidden="true"></i>
+          <p>Ho tre fogli Excel diversi che nessuno aggiorna nello stesso modo. Non so mai qual è quello giusto.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-search" aria-hidden="true"></i>
+          <p>Per sapere dove sono le cose devo chiamare qualcuno o cercare in dieci posti diversi.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-user-question" aria-hidden="true"></i>
+          <p>Ho paura di perdere un'informazione importante perché sta nella testa di una sola persona.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-calendar-event" aria-hidden="true"></i>
+          <p>Scadenze sul calendario, clienti su un foglio, pagamenti su un altro. Ogni tanto qualcosa scivola.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-user-plus" aria-hidden="true"></i>
+          <p>Quando assumo qualcuno ci vogliono settimane prima che capisca come funziona tutto.</p>
+        </div>
+        <div class="problem-card">
+          <i class="ti ti-chart-pie" aria-hidden="true"></i>
+          <p>Non riesco a vedere in un colpo solo come sta andando la mia attività.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LE PAROLE CHE SENTI SPESSO ===== -->
+  <section class="termini section-fade" id="termini">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2>Le parole che senti spesso. Spiegate in modo semplice.</h2>
+        <p>Niente gergo. Solo quello che significa per la tua attività.</p>
+      </div>
+      <div class="termini-grid">
+
+        <div class="termine-card">
+          <div class="termine-header">
+            <span class="termine-word">DASHBOARD</span>
+            <span class="termine-translation">(= il cruscotto)</span>
+          </div>
+          <p class="termine-desc">È la schermata principale del gestionale. Come il cruscotto di un'auto: in un colpo
+            solo vedi tutto quello che conta.</p>
+          <p class="termine-esempio"><strong>Ad esempio:</strong> Quanti lavori sono aperti, cosa scade questa
+            settimana, chi non ha ancora pagato — tutto in una schermata, anche dal telefono.</p>
+        </div>
+
+        <div class="termine-card">
+          <div class="termine-header">
+            <span class="termine-word">BACKLOG</span>
+            <span class="termine-translation">(= la lista delle cose da fare)</span>
+          </div>
+          <p class="termine-desc">È l'elenco ordinato di tutto quello che c'è da fare, messo in ordine di priorità.
+            Niente va perso, niente viene dimenticato.</p>
+          <p class="termine-esempio"><strong>Ad esempio:</strong> Le richieste urgenti stanno in cima. Quelle che
+            possono aspettare stanno in fondo. Il team sa sempre su cosa lavorare.</p>
+        </div>
+
+        <div class="termine-card">
+          <div class="termine-header">
+            <span class="termine-word">ONBOARDING</span>
+            <span class="termine-translation">(= l'accoglienza)</span>
+          </div>
+          <p class="termine-desc">È il percorso che fa un nuovo dipendente o un nuovo cliente quando entra nel sistema.
+            Il gestionale lo guida passo dopo passo da solo.</p>
+          <p class="termine-esempio"><strong>Ad esempio:</strong> Invece di spiegare tutto a voce ogni volta, il sistema
+            mostra cosa fare, step by step, dalla prima volta.</p>
+        </div>
+
+        <div class="termine-card">
+          <div class="termine-header">
+            <span class="termine-word">FLUSSO DI APPROVAZIONE</span>
+            <span class="termine-translation">(= la catena dei sì)</span>
+          </div>
+          <p class="termine-desc">È la regola che decide chi deve vedere cosa e quando. Niente passa senza le
+            approvazioni necessarie.</p>
+          <p class="termine-esempio"><strong>Ad esempio:</strong> Un preventivo deve essere approvato dal titolare prima
+            di uscire? Il sistema lo blocca finché non arriva l'ok — senza che tu debba ricordartelo.</p>
+        </div>
+
+        <div class="termine-card">
+          <div class="termine-header">
+            <span class="termine-word">PERMESSI</span>
+            <span class="termine-translation">(= chi vede cosa)</span>
+          </div>
+          <p class="termine-desc">Non tutti devono vedere tutto. Ogni persona accede solo alle informazioni che servono
+            al suo ruolo.</p>
+          <p class="termine-esempio"><strong>Ad esempio:</strong> Il magazziniere vede le scorte. Il commerciale vede i
+            clienti. Il titolare vede tutto.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== UN CASO REALE ===== -->
+  <section class="caso-reale section-fade" id="caso-reale">
+    <div class="container">
+      <div class="section-header">
+        <h2>Un caso reale</h2>
+        <p>Come un'azienda di costruzioni ha sostituito carta ed Excel con una schermata sola.</p>
+      </div>
+      <div class="caso-reale-layout">
+
+        <div class="caso-reale-text">
+          <span class="caso-badge">Edilizia / Impiantistica · Roma</span>
+          <p>Un'azienda edile con oltre 40 mezzi e 15 cantieri attivi gestiva tutto su carta ed Excel. Ogni mattina il
+            responsabile passava ore a capire quali mezzi erano disponibili, quali avevano revisioni in scadenza, chi
+            era assegnato a quale cantiere.</p>
+          <p>I rapportini giornalieri venivano compilati a mano: quante persone avevano lavorato, quante ore, a quale
+            cantiere. I costi dei mezzi, dei subappaltatori, delle ore di manodopera venivano sommati a fine mese —
+            spesso con errori, sempre con ritardo.</p>
+          <p>Oggi il responsabile apre una schermata. Vede tutto in tempo reale — dal cantiere, dal telefono, in
+            qualsiasi momento.</p>
+        </div>
+
+        <div class="caso-reale-results">
+          <div class="caso-result-item">
+            <i class="ti ti-check"></i>
+            <span>Rapportino digitale giornaliero: persone, ore, cantiere, costo per risorsa</span>
+          </div>
+          <div class="caso-result-item">
+            <i class="ti ti-check"></i>
+            <span>Costo mezzi per ora di utilizzo calcolato in automatico</span>
+          </div>
+          <div class="caso-result-item">
+            <i class="ti ti-check"></i>
+            <span>Documento finale generato in automatico: monte ore giornaliero, mensile e definitivo per
+              cantiere</span>
+          </div>
+          <div class="caso-result-item">
+            <i class="ti ti-check"></i>
+            <span>Alert scadenze revisioni e assicurazioni 72 ore prima</span>
+          </div>
+          <div class="caso-result-item">
+            <i class="ti ti-check"></i>
+            <span>Dashboard con stato cantieri in tempo reale</span>
+          </div>
+          <div class="caso-result-item">
+            <i class="ti ti-check"></i>
+            <span>Zero scadenze perse. Zero errori nei conteggi mensili.</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ALTRI CASI PER SETTORE ===== -->
+  <section class="settori section-fade" id="settori">
+    <div class="container">
+      <div class="section-header">
+        <h2>Lo stesso approccio, settori diversi</h2>
+        <p>Ogni gestionale è costruito sui processi reali di chi lo usa.</p>
+      </div>
+      <div class="settori-grid">
+
+        <div class="case-card">
+          <span class="case-badge">Amministrazione Condominiale</span>
+          <h3 class="case-title">Oltre 10 condomini in gestione</h3>
+          <p>Comunicazioni disperse, scadenze che sfuggono, condomini che non ricevono risposta. Un gestionale che
+            smista le email per categoria, avvisa delle scadenze imminenti e invia solleciti pagamenti in automatico.
+          </p>
+        </div>
+
+        <div class="case-card">
+          <span class="case-badge">Studio Legale / Notarile</span>
+          <h3 class="case-title">Pratiche, scadenze e documenti</h3>
+          <p>Generazione automatica di documenti standard con i dati del caso, gestione scadenze processuali,
+            tracciamento stato pratiche. Il professionista compila i campi, il sistema genera il documento.</p>
+        </div>
+
+        <div class="case-card">
+          <span class="case-badge">Studio Commercialista</span>
+          <h3 class="case-title">Scadenze fiscali e clienti</h3>
+          <p>Dashboard scadenze fiscali per tutti i clienti, sistema di reminder automatico, gestione documentale e
+            archivio digitale. Zero scadenze perse, zero chiamate di sollecito manuale.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== COME LO COSTRUISCO ===== -->
+  <section class="gest-process section-fade" id="come-costruisco">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <h2>Come costruiamo il tuo gestionale</h2>
+      </div>
+      <div class="gest-steps">
+
+        <div class="gest-step">
+          <div class="gest-step-num">1</div>
+          <div class="gest-step-content">
+            <h3>Capisco come lavori adesso</h3>
+            <p>Non come vorresti lavorare in teoria. Come lavori davvero, ogni giorno.</p>
+          </div>
+        </div>
+
+        <div class="gest-step">
+          <div class="gest-step-num">2</div>
+          <div class="gest-step-content">
+            <h3>Mappa il flusso reale</h3>
+            <p>Dove si perde tempo. Dove si perde un'informazione. Dove succedono gli errori.</p>
+          </div>
+        </div>
+
+        <div class="gest-step">
+          <div class="gest-step-num">3</div>
+          <div class="gest-step-content">
+            <h3>Costruisco un prototipo</h3>
+            <p>Qualcosa che puoi toccare con mano prima che sia finito. Vedi, feedback, aggiustiamo insieme.</p>
+          </div>
+        </div>
+
+        <div class="gest-step">
+          <div class="gest-step-num">4</div>
+          <div class="gest-step-content">
+            <h3>Lo sviluppo</h3>
+            <p>Con le tecnologie giuste per il tuo caso.</p>
+          </div>
+        </div>
+
+        <div class="gest-step">
+          <div class="gest-step-num">5</div>
+          <div class="gest-step-content">
+            <h3>Ti affianco</h3>
+            <p>Finché non avrai più bisogno di me.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== BANNER CTA ===== -->
+  <section class="banner-cta-wrap section-fade">
+    <div class="container">
+      <div class="banner-cta">
+        <div class="banner-left">
+          <p class="banner-eyebrow">HAI UN PROGETTO IN MENTE?</p>
+          <p class="banner-main">Entro 3 giorni ricevi un link<br>con la tua DEMO. Gratis. Senza impegno.</p>
+        </div>
+        <div class="banner-center">
+          Costruisco un prototipo funzionante nel tuo settore, con dati realistici. Lo vedi, lo provi, poi decidi.
+        </div>
+        <a href="index.html#contatti" class="btn-primary banner-btn">Richiedi la Demo GRATUITA</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <img src="assets/logo-GM-white.svg" alt="GM Studio Lab" class="footer-logo">
+      <p class="footer-copy">
+        &copy; 2026 GM Studio Lab — Gino Manno
+      </p>
+      <p class="footer-piva">P.IVA — 18586301006</p>
+    </div>
+  </footer>
+
+  <!-- WHATSAPP WIDGET -->
+  <a href="https://wa.me/393332207306?text=Ciao%20Gino%2C%20ti%20scrivo%20dal%20sito%20gmstudiolab.it" target="_blank"
+    rel="noopener" class="wa-widget" aria-label="Contattami su WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#ffffff" aria-hidden="true">
+      <path
+        d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+      <path
+        d="M12 0C5.373 0 0 5.373 0 12c0 2.122.553 4.168 1.602 5.98L0 24l6.233-1.578A11.941 11.941 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818c-1.957 0-3.867-.527-5.53-1.524l-.396-.235-3.698.936.982-3.584-.26-.413A9.763 9.763 0 0 1 2.182 12 9.818 9.818 0 0 1 12 2.182 9.818 9.818 0 0 1 21.818 12 9.818 9.818 0 0 1 12 21.818z" />
+    </svg>
+  </a>
+
+</body>
+
+</html>
